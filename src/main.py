@@ -8,9 +8,9 @@ def main():
     print(password)
     session.auth = ("admin", password)
 
-    auth = session.post('http://' + hostname)
-    response = session.get('http://' + hostname + '/rest/applications')
-
+    auth = session.post('http://' + '192.168.178.57')
+    response = session.get('http://' + '192.168.178.57' + '/html/recordPlanConfig.htm')
+    print(response.text)
 
 if __name__ == '__main__':
     main()
